@@ -40,9 +40,6 @@ exports.config = {
         //     prefs: {'profile.default_content_setting_values.geolocation': 2}
 
         // }
-         'moz:firefoxOptions': {
-            args: [ "--headless" ]
-          }
     },
     onComplete:function () {
         browser.executeScript('window.localStorage.clear();');
