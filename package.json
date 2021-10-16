@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "protractor ./protractor.conf.js",
-    "webdriver-update": "webdriver-manager update",
+    "webdriver-update": "webdriver-manager update --versions.chrome 85.0.4183.83",
     "api":"protractor ./conf_api.js"
   },
   "keywords": [
