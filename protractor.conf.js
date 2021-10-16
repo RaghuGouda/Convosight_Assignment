@@ -34,9 +34,9 @@ exports.config = {
     },
     capabilities: {
         browserName: 'chrome',
-        // 'moz:firefoxOptions': {
-        //     args: [ "--headless" ]
-        //   }
+        chromeOptions: {
+            args: [ "--headless", "--disable-gpu", "--window-size=800,600" ]
+          }
     },
     onComplete:function () {
         browser.executeScript('window.localStorage.clear();');
