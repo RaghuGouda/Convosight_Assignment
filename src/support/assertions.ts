@@ -26,7 +26,7 @@ export class Assertions {
     }
 
     async elementPresent(element,value){
-        await browser.sleep(3000)
+        await browser.sleep(5000)
         await expect(element.isPresent()).to.eventually.equal(JSON.parse(value))
 
     }

@@ -1,6 +1,4 @@
 exports.config = {
-    baseUrl: 'http://automationpractice.com/index.php',
-
     directConnect: false,
     allScriptsTimeout: 110000,
     getPageTimeout: 60000,
@@ -10,7 +8,7 @@ exports.config = {
     frameworkPath: require.resolve("protractor-cucumber-framework"),
 
         suites:{
-    regression:['./features/store.feature']
+    regression:['./features/api.feature']
     },
 
     plugins: [{
@@ -21,26 +19,18 @@ exports.config = {
             durationInMS: true,
         }
     }],
-    onPrepare: function() {
-        browser.manage().window().maximize();
-    },
     cucumberOpts: {
         require: ["./src/step_definitions/*.ts","./src/support/*.ts"],
         'require-module':   [ 'ts-node/register'],
         format: 'json:temp/Reports/results.json',
         strict:  true,
         keepAlive: false,
-        'fail-fast': true,
+        'fail-fast': true,    
     },
     capabilities: {
         browserName: 'firefox',
         'moz:firefoxOptions': {
             args: [ "--headless" ]
           }
-    },
-    onComplete:function () {
-        browser.executeScript('window.localStorage.clear();');
-        browser.executeScript('window.sessionStorage.clear();');
-        browser.driver.manage().deleteAllCookies();
     }
 };

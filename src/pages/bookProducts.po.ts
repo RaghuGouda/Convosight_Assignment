@@ -93,11 +93,7 @@ export class BookProductPage {
         await elementHelper.waitForElement(timeOuts.Duration.shortDuration)
         await browser.executeScript('window.scrollTo(0,600);').then(function () {
             console.log('++++++SCROLLED Down+++++');
-        });
-        // await jsonData.amount.forEach((value,index)=>{
-        //     index=index+1
-        //     return assertionsHelper.textAssertion(element(by.xpath("(//tr/td[@class='cart_unit']//span/span)["+index+"]")),value)
-        // }); 
+        }); 
         await elementHelper.waitForElement(timeOuts.Duration.shortDuration)
         await assertionsHelper.textAssertion(this.amount1,jsonData.amount[0])
         await assertionsHelper.textAssertion(this.amount2,jsonData.amount[1])

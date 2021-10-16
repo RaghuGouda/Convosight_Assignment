@@ -1,11 +1,12 @@
 {
-  "name": "newTours-tests",
+  "name": "QA-tests",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "protractor ./protractor.conf.js",
-    "webdriver-update": "webdriver-manager update"
+    "webdriver-update": "webdriver-manager update",
+    "api":"protractor ./conf_api.js"
   },
   "keywords": [
     "bdd",
@@ -15,6 +16,7 @@
   ],
   "author": "RaghuGowda",
   "dependencies": {
+    "apickli": "^3.0.1",
     "chai": "^4.2.0",
     "chai-as-promised": "^7.1.1",
     "chromedriver": "^80.0.0",
