@@ -1,7 +1,7 @@
 exports.config = {
     baseUrl: 'http://automationpractice.com/index.php',
 
-    directConnect: false,
+    directConnect: true,
     allScriptsTimeout: 110000,
     getPageTimeout: 60000,
 
@@ -33,7 +33,7 @@ exports.config = {
         'fail-fast': true,
     },
     capabilities: {
-        browserName: 'firefox',
+        browserName: 'chrome',
         // 'moz:firefoxOptions': {
         //     args: [ "--headless" ]
         //   }
